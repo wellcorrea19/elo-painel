@@ -1,0 +1,80 @@
+<body class="bg-theme bg-theme9">
+    <!-- Start wrapper-->
+    <div id="wrapper">
+      <app-sidebar></app-sidebar>
+      <div class="clearfix"></div>
+        
+      <div class="content-wrapper">
+        <div class="container-fluid">
+    
+          <!--Start Dashboard Content-->
+          <div class="card mt-3">
+            <div class="card-content">
+              <div class="row row-group m-0">
+                <div class="col-12">
+                  <div class="card-body">
+                    
+                    <div>
+
+                        <h1 class="title  text-white">Atualizacao do Usuario</h1>
+
+                        <div class="box">
+                            <form>
+                              <mat-form-field>
+                                <input matInput placeholder="CPF" [(ngModel)]="user.cpf" name="cpf" disabled>
+                              </mat-form-field>
+                              <mat-form-field>
+                                <input matInput placeholder="Tração" [(ngModel)]="user.tracao" name="tracao" required>
+                              </mat-form-field>
+                              <mat-form-field>
+                                  <input matInput placeholder="Name" [(ngModel)]="user.name" name="name" required>
+                              </mat-form-field>
+                              <mat-form-field>
+                                  <input matInput placeholder="Email" [(ngModel)]="user.email" name="email" disabled>
+                              </mat-form-field>
+                              <mat-form-field>
+                                  <input matInput placeholder="Telefone" [(ngModel)]="user.telefone" name="telefone" required>
+                              </mat-form-field>
+                              <mat-form-field>
+                                <button mat-raised-button (click)="updateSenha()" color="primary" style="position: absolute; right: 0; bottom: 0">
+                                  Atualizar Senha
+                                </button>
+                                <input matInput placeholder="senha" [(ngModel)]="user.senha" name="senha" required>
+                              </mat-form-field>
+                            </form>
+
+                            <button mat-raised-button (click)="cancel()" >
+                                Voltar
+                            </button>
+                            
+                            <button mat-raised-button (click)="updateUser()" color="primary">
+                                Atualizar Usuario
+                            </button>
+
+                        </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+          
+          <!--End Dashboard Content-->
+          
+          <!--start overlay-->
+          <div class="overlay toggle-menu"></div>
+          <!--end overlay-->
+            
+        </div>
+        <!-- End container-fluid-->
+        
+      </div><!--End content-wrapper-->
+      <!--Start Back To Top Button-->
+      <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+      <!--End Back To Top Button-->
+        
+    </div><!--End wrapper-->
+      
+  </body>

@@ -1,0 +1,84 @@
+<div class="mat-elevation-z8 container">
+
+
+    <!--  Paginator-->
+    <mat-paginator class="paginator"
+                   [pageIndex]="0"
+                   [pageSize]="10"
+                   [pageSizeOptions]="[10, 25, 50]">
+    </mat-paginator>
+
+
+    <table mat-table class="viagem-table hover" matSort [dataSource]="dataSource">
+
+        <!-- detalhes column-->
+        <ng-container matColumnDef="detalhes">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef> Detalhes</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">
+                <a (click)="changeIcon(row.idgps)" class="hover detalhes icon-hover">
+                    <i class="material-icons hover">
+                        add_circle
+                    </i>
+                </a>
+            </td>
+        </ng-container>
+
+        <!-- Protocolo Column -->
+        <ng-container matColumnDef="protocolo">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Protocolo</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">{{row.protocolo}}</td>
+        </ng-container>
+
+        <!-- Tracao Column -->
+        <ng-container matColumnDef="tracao">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Tracao</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">{{row.tracao}}</td>
+        </ng-container>
+
+        <!-- Etapa Column -->
+        <!-- <ng-container matColumnDef="etapa">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Etapa</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">{{row.etapa}}</td>
+        </ng-container> -->
+
+        <!-- Descricao Etapa Column -->
+        <ng-container matColumnDef="descricaotipo">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Descrição Etapa</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">{{row.descricaotipo}}</td>
+        </ng-container>
+
+        <!-- Nome do local Column -->
+        <ng-container matColumnDef="nomelocaletapa">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Nome do Local</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">{{row.nomelocaletapa}}</td>
+        </ng-container>
+
+        <!-- Nome do Destinatario Column -->
+        <ng-container matColumnDef="destinatario">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Nome do Destinatário</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">{{row.destinatario}}</td>
+        </ng-container>
+
+
+        <!-- Previsao de Entrega Column -->
+        <ng-container matColumnDef="previsaoentrega">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Previsão de Entrega</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">{{row.previsaoentrega
+                | date:'dd/MM/yyyy HH:mm:ss'}}</td>
+        </ng-container>
+
+        <!-- Tempo Column -->
+        <ng-container matColumnDef="tempo">
+            <th class="header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Tempo de Chegada</th>
+            <td mat-cell *matCellDef="let row" class="get-dados">{{row.tempo}}</td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+            (click)="selection.toggle(row)"
+            [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}">
+        </tr>
+    </table>
+
+</div>

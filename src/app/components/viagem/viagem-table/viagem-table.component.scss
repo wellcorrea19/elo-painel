@@ -1,0 +1,85 @@
+//Container da tabela
+.container {
+  overflow: auto;
+  max-width: 100%;
+}
+
+//Estilo da tbela
+table{
+  margin-top: 5px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  font-weight: normal;
+}
+
+
+//coloca o paginator para direita
+.paginator{
+  display: flex;
+  justify-content: flex-start;
+}
+
+// desablita as informacoes de itens no mat paginator
+::ng-deep .mat-paginator {
+  .mat-paginator-range-label {
+    display: none !important;
+  }
+  button{
+    display: none !important;
+  }
+}
+
+
+.mat-row.highlighted {
+  background: #ddd;;
+}
+//coloca um hover nas linhas da tabela
+.hover tr:hover {
+  background-color: #ddd;
+}
+
+//Coloca um estilo nas bordas das linhas e colunas da tabela
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th.mat-header-cell:first-of-type, td.mat-footer-cell:first-of-type {
+  text-align: center;
+  padding-left: 10px;
+}
+
+td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+  text-align: center;
+  padding-left: 0;
+}
+
+//alinha o icone da coluna detalhes da tabela, ajusta o padding e muda a cor
+.detalhes{
+  text-align: center;
+  padding: 10px;
+  color: #2d2d2d;
+}
+
+//formata os dados que retornam da api na tabela
+.get-dados{
+  padding-left: 10px;
+}
+
+
+//alinha todas as outras colunas da tabela, ajusta o padding e muda a cor
+.header-cell {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #2d2d2d;
+
+}
+.icon-hover {
+  cursor: pointer;
+}
+
+
+
+

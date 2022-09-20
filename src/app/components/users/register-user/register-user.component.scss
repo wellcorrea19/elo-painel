@@ -1,0 +1,54 @@
+ mat-dialog-container{
+  padding: 10px !important;
+ }
+ 
+ //   Formatação textos
+  .label-title {
+    font-size: 12px;
+    color: #b7b7b7;
+    padding-left: 5px;
+  }
+  
+  .close-modal {
+    justify-content: flex-end;
+    display: flex;
+  }
+  
+  .form-group{
+    font-family: Times, "Times New Roman", Georgia, serif;
+  }
+  
+  .tittle {
+    color: #104179;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  // Format buttons
+  .button-back{
+    background-color: none;
+    border: none;
+    outline:none;
+    color: #104179;
+    border-radius: 10px;
+    padding: 10px 25px;
+    text-decoration: none;
+    margin:5px;
+    float: left;
+    cursor: pointer;
+  }
+  
+  .button-style{
+    background-color: #104179;
+    border: none;
+    outline:none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    text-decoration: none;
+    margin:5px;
+    cursor: pointer;
+  }
+  

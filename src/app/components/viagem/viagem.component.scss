@@ -1,0 +1,96 @@
+agm-map {
+  height: 60vh;
+
+}
+
+agm-marker  {
+  height: 10px;
+  size: 10px;
+}
+
+
+
+.card{
+  margin-top: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-body{
+  padding: 1.25rem 0 !important;
+}
+
+.buttons-box{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  background-image: linear-gradient(45deg, #00244c, #a2a2a2);
+  color: #FFF;
+  border: none;
+
+}
+#resumo , #em-viagem {
+  background-color: Transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 32px;
+}
+#resumo:active, #em-viagem:active{
+  background-color: #31bab7;
+  outline:0;
+}
+
+#resumo:focus, #em-viagem:focus{
+  background-color: #31bab7;
+  outline:0;
+}
+
+.btn-update {
+  height: 31px;
+  width: 30px;
+  border-radius: 25px;
+  background-image: linear-gradient(45deg, #00244c, #a2a2a2);
+  color: white;
+  border: none;
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+}
+
+.icon-update {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+.behind {
+  position: block;
+  z-index: 3;
+}
+
+.frota {
+  margin-top: 5px;
+  font-size: 20px;
+  padding: 10px;
+  color: #00244c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#legendTittle {
+  color: white;
+  font-family: 'Roboto','sans-serif';
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.container-fluid {
+  margin: 0;
+}
+
+.legendIcon {
+  background-image: linear-gradient(45deg, #00244c, #a2a2a2);
+  padding: 5px;
+  border-radius: 7px;
+  margin-right: 5px;
+}

@@ -1,0 +1,110 @@
+
+.container {
+  width: 500px;
+  height: 100%;
+  background: transparent;
+  display: block;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+}
+
+.main-menu {
+  position: absolute;
+  display: table-cell;
+  height: 100%;
+  overflow: hidden;
+}
+.main-menu.menu-light {
+  color: #727E8C;
+  background: #F2F4F4;
+  border: #DFE3E7;
+}
+
+.main-menu.menu-light .navigation li a {
+  display: flex;
+  align-items: center;
+  color: royalblue;
+  padding: 10px 1.5rem 10px 12px;
+  text-decoration: none;
+}
+
+.main-menu.menu-fixed {
+  position: fixed;
+  top: 0;
+}
+
+.main-menu .navbar-header {
+  width: 185px;
+  height: 3.6rem;
+  padding: 0.35rem 1.45rem 0.3rem 1.3rem;
+  cursor: pointer;
+}
+
+.welcome {
+  color: royalblue;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16px;
+  margin: 0 0 0;
+  padding: 20px 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.icon {
+  position: relative;
+  top: 5px;
+}
+
+.main-menu .navbar-header .modern-nav-toggle {
+  animation: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards 1 fadein;
+  margin: 0.75rem 0 0;
+}
+
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-vertical {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  text-decoration: none;
+}
+
+.sidenav {
+  backdrop-filter: blur(8px); // This be the blur
+  height: 100vh;
+  width: 46%;
+}
+
+.pages-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: royalblue;
+  text-align: center;
+  padding: 0;
+  letter-spacing: 1px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.menu-title {
+  margin: 3px 5px;
+}
+
+.button {
+  border: none;
+  outline:none;
+  color: white;
+  background-color: royalblue;
+  opacity: 0.2;
+  z-index: 200;
+}
+.button:hover {
+  opacity: 1;
+}

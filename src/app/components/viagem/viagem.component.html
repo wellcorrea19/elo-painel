@@ -1,0 +1,65 @@
+<body class="bg-theme">
+    <!-- Start wrapper-->
+    <div id="wrapper">
+      <app-sidebar></app-sidebar>
+      <div class="clearfix"></div>
+        
+      <div class="content-wrapper">
+        <div class="container-fluid">
+          
+          <div class="card-body">
+            <div class="behind">
+                <agm-map class="map"
+                        [latitude]="lat"
+                        [zoom]="zoom"
+                        [longitude]="lng"
+                        (mapReady)="mapReady($event)"
+                        [usePanning]="true">
+
+                    <agm-marker *ngFor="let marker of markers; let i = index"
+                                [latitude]="marker.lat"
+                                [longitude]="marker.lng"
+                                [iconUrl]="marker.icon">
+                    </agm-marker>
+
+                    <div class="legendIcon" id="legend">
+                        <div id="legendTittle">Veículos</div>
+                    </div>
+
+                </agm-map>
+
+
+                <mat-card class="card">
+                    <mat-card-title>
+                        <label class="frota"> Resumo da Frota ({{hour}})</label>
+                        <button class="btn-update" (click)="updatePage()"><mat-icon class="icon-update">update</mat-icon></button>
+                    </mat-card-title>
+
+                    <mat-card-content class="buttons-box">
+                        <button id="resumo">Resumo</button>
+                        <button id="em-viagem">Em Viagem</button>
+                    </mat-card-content>
+
+                    <app-viagem-table (evento)="receberInformacao($event)"></app-viagem-table>
+
+                </mat-card>
+            </div>
+        </div>
+      
+      <!--End Dashboard Content-->
+      
+      <!--start overlay-->
+      <div class="overlay toggle-menu"></div>
+      <!--end overlay-->
+        
+    </div>
+    <!-- End container-fluid-->
+    
+  </div><!--End content-wrapper-->
+  <!--Start Back To Top Button-->
+  <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+  <!--End Back To Top Button-->
+    
+</div><!--End wrapper-->
+  
+</body>

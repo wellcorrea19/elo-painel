@@ -1,0 +1,82 @@
+<div class="content">
+    <form [formGroup]="signUpForm">
+        <h1 class="tittle">Cadastrar Usuário</h1>
+        <div class="text-center">
+            <mat-checkbox (click)="showTracao()"><span style="color: black">Usuário Gestor?</span></mat-checkbox>
+        </div>
+            <mat-grid-list cols="3" rowHeight="3:1">
+
+                <mat-grid-tile *ngIf="!checked">
+                    <!-- Campo Tração -->
+                    <mat-form-field appearance="standard">
+                        <mat-label class="label-title">Placa - Tração</mat-label>
+                        <input matInput type="text" formControlName="tracao" maxlength="7">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <!-- Campo Nome -->
+                    <mat-form-field appearance="standard">
+                        <mat-label class="label-title">Nome Completo</mat-label>
+                        <input matInput type="text" formControlName="name" >
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <!-- Campo Telefone -->
+                    <mat-form-field appearance="standard">
+                        <mat-label class="label-title">Telefone</mat-label>
+                        <input matInput type="text" formControlName="telefone">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <!-- Campo CPF -->
+                    <mat-form-field appearance="standard">
+                        <mat-label class="label-title">CPF</mat-label>
+                        <input matInput type="text" formControlName="cpf" maxlength="11">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <!-- Campo E-mail -->
+                    <mat-form-field appearance="standard">
+                        <mat-label class="label-title">E-mail</mat-label>
+                        <input matInput type="text" formControlName="email">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <!-- Campo Senha -->
+                    <mat-form-field appearance="standard">
+                        <mat-label class="label-title">Senha</mat-label>
+                        <input matInput type="text" formControlName="senha">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <!-- Campo Confirmar Senha -->
+                    <mat-form-field appearance="standard">
+                        <mat-label class="label-title">Confirmar Senha</mat-label>
+                        <input matInput type="text" formControlName="passwordCheck">
+                    </mat-form-field>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+        <div class="form-group text-center">
+            <button class="button-back" (click)="closeModal()">
+                Voltar
+            </button>
+            <!-- <button class="button-style">
+                Inativar
+            </button> -->
+            <button style="float: right" class="button-style submit" *ngIf="!checked" (click)="registerFrota()">
+                Cadastrar Frota
+            </button>
+            <button style="float: right" class="button-style submit" *ngIf="checked"  (click)="registerGestor()">
+                Cadastrar Gestor
+            </button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,49 @@
+
+    <body class="login">
+        <div class="row" style="margin: 0;">
+        <div class="col-xs-12 col-md-4">
+
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+            <section class="login_content">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <img src="../../../assets/images/logo-elo.jpg" style="height: 200px; width: 200px;">
+                    <h1 style="font-size: 22px; color: gray">Efetue seu Login!</h1>
+                    <div>
+                        <input class="form-control"  
+                        type="text" 
+                        formControlName="username"
+                        [ngClass]="{ 'is-invalid': submitted && formFields.username.errors }"
+                        placeholder="E-mail">
+                    </div>
+                    <div *ngIf="submitted && formFields.username.errors">
+                        <div *ngIf="formFields.username.errors.required">Usuário não inserido</div>
+                    </div>
+                    <div>
+                        <input type="password" 
+                        formControlName="password" 
+                        class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && formFields.password.errors }"
+                        placeholder="Senha"/>
+                    </div>
+                    <div *ngIf="submitted && formFields.password.errors">
+                        <div *ngIf="formFields.password.errors.required">Senha não inserida</div>
+                    </div>
+                    <a class="reset_pass" href="#">Esqueceu sua senha?</a>
+                    <div>
+                        <button class="btn btn-default submit" [disabled]="submitted" (keyup.enter)="submitted">Entrar</button>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </form>
+            </section>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-8" style="padding: 0;">
+            <div class="img-login"></div>
+        </div>
+
+        </div>
+    </body>

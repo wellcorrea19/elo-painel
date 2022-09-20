@@ -1,0 +1,31 @@
+<div class="content">
+    <form>
+        <h1 class="tittle">Informacoes do Usuario</h1>
+        <div class="border-style">
+            <div class="form-group">
+                <span>CPF: {{user?.cpf}}</span>
+            </div>
+            <div class="form-group">
+                <span>Placa - Tração: {{user?.tracao}}</span>
+            </div>
+            <div class="form-group">
+                <span>Nome: {{user?.name}}</span>
+            </div>
+            <div class="form-group">
+                <span>Email: {{user?.email}}</span>
+            </div>
+            <div class="form-group">
+                <span>Telefone: {{user?.telefone}}</span>
+            </div>
+        </div>
+
+
+        <button class="float-left" mat-raised-button (click)="closeModal()">
+            Voltar
+        </button>
+        <button class="float-right" mat-raised-button (click)="updateUser()" color="primary">
+            Atualizar
+        </button>
+
+    </form>
+</div>
